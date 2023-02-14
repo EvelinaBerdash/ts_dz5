@@ -1,5 +1,5 @@
 import { renderSearchFormBlock } from "./search-form.js"
-import { renderSearchResultsBlock, renderSearchStubBlock } from "./search-results.js"
+import { renderSearchStubBlock } from "./search-results.js"
 import { getFavoritesAmount, renderUserBlock } from "./user.js"
 // import { renderToast } from "./lib.js"
 
@@ -19,6 +19,7 @@ if (typeof window !== undefined && window && window.addEventListener) {
     );
     renderUserBlock("Eva Berdash", "/img/avatar.png", getFavoritesAmount());
     renderSearchFormBlock(dateIn, dateOut);
+    renderSearchStubBlock();
    // renderSearchResultsBlock();
     // renderToast(
     //   {
@@ -32,7 +33,7 @@ if (typeof window !== undefined && window && window.addEventListener) {
     //     },
     //   }
     // );
-    renderSearchResultsBlock();
+    // renderSearchResultsBlock();
   });
 } else {
   console.log("This is not browser!");
