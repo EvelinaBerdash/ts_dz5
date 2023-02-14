@@ -1,5 +1,5 @@
 import { renderBlock } from "./lib.js"
-import { renderSearchResultsBlock } from "./search-results.js";
+import { fetchPlaces, renderSearchResultsBlock } from "./search-results.js";
 
 interface SearchFormData {
   cityForm: string;
@@ -24,9 +24,10 @@ function search(searchFormData: SearchFormData) {
   // console.log(searchFormData);
 }
 
-function onSearchClick() {
+async function onSearchClick() {
   console.log("sadfsd");
 
+  await fetchPlaces();
   renderSearchResultsBlock();
   const cityForm = (document.getElementById("city") as HTMLInputElement).value;
   const dateInForm = (
