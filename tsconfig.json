@@ -1,0 +1,22 @@
+// {
+//     "compilerOptions": {
+//       "outDir": "public/scripts",
+//       "target": "es2015",
+//       "module": "es2015",
+//       "moduleResolution": "node"
+//     },
+//     "files": ["src/index.ts"],
+//     "include": ["src"]
+//   }
+{
+  "compilerOptions": {
+    "outDir": "public/scripts",
+    "target": "ES6",
+    "moduleResolution": "node",
+    "allowJs": true
+  },
+  // "files": ["src/index.ts"],
+  "include": [
+    "src/**/*"
+  ]
+}
